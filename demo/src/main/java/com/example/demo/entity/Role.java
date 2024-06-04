@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 
 public class Role {
     @Id
+    @GeneratedValue
     private Integer id;
     @Enumerated(EnumType.STRING)
     private RoleName name;

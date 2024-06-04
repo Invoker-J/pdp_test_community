@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +18,7 @@ import java.util.UUID;
 @Entity
 public class AttachmentContent {
     @Id
+    @GeneratedValue
     @Column(columnDefinition = "uuid default uuid_generate_v4()")
     private UUID id;
     private String contentType;
